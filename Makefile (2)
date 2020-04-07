@@ -1,0 +1,11 @@
+CC=gcc
+CFLAGS=-Wall -ansi -pedantic
+
+main: main.o Lista.o
+
+main.o: main.c Lista.h
+Lista.o: Lista.c Lista.h Nodo.h
+
+.PHONY: clean
+clean:
+	rm -f *.o main
